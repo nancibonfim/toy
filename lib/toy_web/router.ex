@@ -8,7 +8,7 @@ defmodule ToyWeb.Router do
   scope "/api", ToyWeb do
     pipe_through :api
 
-    get "/t", TracksController, :index
+    post "/t", TracksController, :index
 
   end
 end
