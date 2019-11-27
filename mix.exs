@@ -5,7 +5,7 @@ defmodule Toy.MixProject do
     [
       app: :toy,
       version: "0.1.0",
-      elixir: "~> 1.5",
+      elixir: "~> 1.9",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -41,7 +41,6 @@ defmodule Toy.MixProject do
       {:amqp, "~> 1.3"},
       {:hackney, "~> 1.15"},
       {:briefly, "~> 0.3.0"}
-      
     ]
   end
 end
