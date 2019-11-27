@@ -4,12 +4,12 @@ defmodule Toy.Application do
   @moduledoc false
 
   use Application
+  use Supervisor
 
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      ToyWeb.Endpoint,
       # Starts a worker by calling: Toy.Worker.start_link(arg)
       # {Toy.Worker, arg},
       supervisor(ToyWeb.Endpoint, []),
