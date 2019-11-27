@@ -36,7 +36,7 @@ defmodule Receiver do
     if full?() do
       l = Agent.get(:batcher, fn list -> list end)
       {:ok, path} = Briefly.create
-      {:ok, json} = Jason.encode(l)
+      {:ok, json} = Poison.encode(l)
       write_and_(path, json)
       flush()
     end
